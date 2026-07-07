@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productivity Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Remix Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--================ BACKGROUND =================-->
+
+    <div class="background-overlay"></div>
+
+    <!--================ MAIN CONTAINER =================-->
+
+    <div class="dashboard">
+      <!--====================================================-->
+      <!-- SIDEBAR -->
+      <!--====================================================-->
+
+      <aside class="sidebar" id="sidebar">
+        <div>
+          <div class="logo">
+            <i class="ri-leaf-fill"></i>
+          </div>
+
+          <button id="collapseBtn" class="collapse-btn">
+            <i class="ri-menu-4-line"></i>
+          </button>
+
+          <nav>
+            <a href="#" class="active">
+              <i class="ri-home-5-line"></i>
+              <span>Home</span>
+            </a>
+
+            <a href="#">
+              <i class="ri-checkbox-line"></i>
+              <span>Todo</span>
+            </a>
+
+            <a href="#">
+              <i class="ri-calendar-line"></i>
+              <span>Planner</span>
+            </a>
+
+            <a href="#">
+              <i class="ri-timer-line"></i>
+              <span>Pomodoro</span>
+            </a>
+
+            <a href="#">
+              <i class="ri-cloud-line"></i>
+              <span>Weather</span>
+            </a>
+
+            <a href="#">
+              <i class="ri-focus-3-line"></i>
+              <span>Goals</span>
+            </a>
+          </nav>
+        </div>
+
+        <div class="bottom-menu">
+          <a href="#">
+            <i class="ri-moon-line"></i>
+            <span>Theme</span>
+          </a>
+        </div>
+      </aside>
+
+      <!--====================================================-->
+      <!-- CONTENT -->
+      <!--====================================================-->
+
+      <main class="content">
+        <!--================ HEADER ================-->
+
+        <header class="header">
+          <div>
+            <h1>Good Morning, Sahana ☀</h1>
+
+            <p>Let's make this day productive and amazing!</p>
+          </div>
+
+          <div class="header-right">
+            <button>
+              <i class="ri-notification-3-line"></i>
+            </button>
+
+            <img src="https://i.pravatar.cc/150?img=32" />
+          </div>
+        </header>
+
+        <!--====================================================-->
+        <!-- TOP CARDS -->
+        <!--====================================================-->
+
+        <section class="top-cards">
+          <!--================ TIME CARD ================-->
+
+          <div class="glass-card">
+            <div class="card-title">
+              <div class="icon">
+                <i class="ri-time-line"></i>
+              </div>
+
+              <h3>Time</h3>
+            </div>
+
+            <div class="clock">
+              <h2 id="time">
+                09:42
+
+                <span>AM</span>
+              </h2>
+            </div>
+
+            <p id="date">Monday, 7 July 2026</p>
+
+            <div class="card-footer">
+              <span>Have a great day!</span>
+
+              <i class="ri-heart-fill"></i>
+            </div>
+          </div>
+
+          <!--================ WEATHER ================-->
+
+          <div class="glass-card">
+            <div class="card-title">
+              <div class="icon weather-icon">
+                <i class="ri-cloudy-line"></i>
+              </div>
+
+              <h3>Weather</h3>
+
+              <span class="location">
+                Bangalore
+
+                <i class="ri-map-pin-line"></i>
+              </span>
+            </div>
+
+            <div class="weather">
+              <div>
+                <h2>
+                  23°
+
+                  <span>C</span>
+                </h2>
+
+                <p>Partly Cloudy</p>
+              </div>
+
+              <div class="weather-image">☁️</div>
+            </div>
+
+            <div class="weather-footer">
+              <div>
+                <i class="ri-drop-line"></i>
+
+                <span>
+                  Humidity
+
+                  <strong>72%</strong>
+                </span>
+              </div>
+
+              <div>
+                <i class="ri-windy-line"></i>
+
+                <span>
+                  Wind
+
+                  <strong>12 km/h</strong>
+                </span>
+              </div>
+
+              <div>
+                <i class="ri-temp-cold-line"></i>
+
+                <span>
+                  Feels Like
+
+                  <strong>24°</strong>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!--================ QUOTE ================-->
+
+          <div class="glass-card">
+            <div class="card-title">
+              <div class="icon quote">
+                <i class="ri-double-quotes-l"></i>
+              </div>
+
+              <h3>Motivation</h3>
+            </div>
+
+            <div class="quote-body">
+              <p id="quote">Believe you can and you're halfway there.</p>
+
+              <span id="author"> — Theodore Roosevelt </span>
+            </div>
+
+            <button class="refresh">
+              <i class="ri-refresh-line"></i>
+            </button>
+          </div>
+        </section>
+
+        <!--====================================================-->
+        <!-- FEATURE GRID -->
+        <!--====================================================-->
+
+        <section class="features">
+          <div class="feature-card">
+            <i class="ri-checkbox-line"></i>
+
+            <h4>Todo List</h4>
+
+            <p>Add and manage your tasks</p>
+          </div>
+
+          <div class="feature-card">
+            <i class="ri-calendar-line"></i>
+
+            <h4>Daily Planner</h4>
+
+            <p>Plan your day efficiently</p>
+          </div>
+
+          <div class="feature-card">
+            <i class="ri-timer-line"></i>
+
+            <h4>Pomodoro Timer</h4>
+
+            <p>Stay focused while working</p>
+          </div>
+
+          <div class="feature-card">
+            <i class="ri-focus-3-line"></i>
+
+            <h4>Goals</h4>
+
+            <p>Track your progress</p>
+          </div>
+
+          <div class="feature-card">
+            <i class="ri-double-quotes-l"></i>
+
+            <h4>Motivation</h4>
+
+            <p>Get inspired every day</p>
+          </div>
+
+          <div class="feature-card">
+            <i class="ri-cloud-line"></i>
+
+            <h4>Weather</h4>
+
+            <p>Check current weather</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- JS -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
