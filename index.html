@@ -16,8 +16,11 @@
   </head>
 
   <body>
-    <!--================ BACKGROUND =================-->
+    <video id="bgVideo" autoplay muted loop playsinline>
+      <source src="assets/morning.mp4" type="video/mp4" />
+    </video>
 
+    <div class="background-overlay"></div>
     <div class="background-overlay"></div>
 
     <!--================ MAIN CONTAINER =================-->
@@ -29,41 +32,33 @@
 
       <aside class="sidebar" id="sidebar">
         <div>
-          <div class="logo">
-            <i class="ri-leaf-fill"></i>
+          <div class="logo-collapse">
+            <div class="logo">
+              <i class="ri-leaf-fill"></i>
+            </div>
+
+            <button id="collapseBtn" class="collapse-btn">
+              <i class="ri-arrow-right-s-line"></i>
+            </button>
           </div>
 
-          <button id="collapseBtn" class="collapse-btn">
-            <i class="ri-menu-4-line"></i>
-          </button>
-
           <nav>
-            <a href="#" class="active">
+            <a href="#" id="homeBtn" class="active">
               <i class="ri-home-5-line"></i>
               <span>Home</span>
             </a>
 
-            <a href="#">
+            <a href="#" id="todoBtn">
               <i class="ri-checkbox-line"></i>
               <span>Todo</span>
             </a>
 
-            <a href="#">
+            <a href="#" id="plannerBtn">
               <i class="ri-calendar-line"></i>
               <span>Planner</span>
             </a>
 
-            <a href="#">
-              <i class="ri-timer-line"></i>
-              <span>Pomodoro</span>
-            </a>
-
-            <a href="#">
-              <i class="ri-cloud-line"></i>
-              <span>Weather</span>
-            </a>
-
-            <a href="#">
+            <a href="#" id="goalsBtn">
               <i class="ri-focus-3-line"></i>
               <span>Goals</span>
             </a>
@@ -71,207 +66,256 @@
         </div>
 
         <div class="bottom-menu">
-          <a href="#">
+          <a href="#" id="themeBtn">
             <i class="ri-moon-line"></i>
             <span>Theme</span>
           </a>
         </div>
       </aside>
 
-      <!--====================================================-->
-      <!-- CONTENT -->
-      <!--====================================================-->
-
       <main class="content">
-        <!--================ HEADER ================-->
+        <!--================ HOME PAGE ================-->
+        <section id="homePage" class="page active">
+          <header class="header">
+            <div>
+              <h1 id="greeting"></h1>
+              <p>Let's make this day productive and amazing!</p>
+            </div>
 
-        <header class="header">
-          <div>
-            <h1>Good Morning, Sahana ☀</h1>
+            <div class="header-right">
+              <button>
+                <i class="ri-notification-3-line"></i>
+              </button>
 
-            <p>Let's make this day productive and amazing!</p>
-          </div>
+              <img src="https://i.pravatar.cc/150?img=32" />
+            </div>
+          </header>
 
-          <div class="header-right">
-            <button>
-              <i class="ri-notification-3-line"></i>
-            </button>
-
-            <img src="https://i.pravatar.cc/150?img=32" />
-          </div>
-        </header>
-
-        <!--====================================================-->
-        <!-- TOP CARDS -->
-        <!--====================================================-->
-
-        <section class="top-cards">
-          <!--================ TIME CARD ================-->
-
-          <div class="glass-card">
-            <div class="card-title">
-              <div class="icon">
-                <i class="ri-time-line"></i>
+          <!-- TOP CARDS -->
+          <section class="top-cards">
+            <div class="glass-card">
+              <div class="card-title">
+                <div class="icon">
+                  <i class="ri-time-line"></i>
+                </div>
+                <h3>Time</h3>
               </div>
 
-              <h3>Time</h3>
-            </div>
-
-            <div class="clock">
-              <h2 id="time">
-                09:42
-
-                <span>AM</span>
-              </h2>
-            </div>
-
-            <p id="date">Monday, 7 July 2026</p>
-
-            <div class="card-footer">
-              <span>Have a great day!</span>
-
-              <i class="ri-heart-fill"></i>
-            </div>
-          </div>
-
-          <!--================ WEATHER ================-->
-
-          <div class="glass-card">
-            <div class="card-title">
-              <div class="icon weather-icon">
-                <i class="ri-cloudy-line"></i>
+              <div class="clock">
+                <h2 id="time"></h2>
               </div>
 
-              <h3>Weather</h3>
+              <p id="date"></p>
 
-              <span class="location">
-                Bangalore
-
-                <i class="ri-map-pin-line"></i>
-              </span>
-            </div>
-
-            <div class="weather">
-              <div>
-                <h2>
-                  23°
-
-                  <span>C</span>
-                </h2>
-
-                <p>Partly Cloudy</p>
+              <div class="card-footer">
+                <span>Have a great day!</span>
+                <i class="ri-heart-fill"></i>
               </div>
-
-              <div class="weather-image">☁️</div>
             </div>
 
-            <div class="weather-footer">
-              <div>
-                <i class="ri-drop-line"></i>
+            <div class="glass-card">
+              <div class="card-title">
+                <div class="icon weather-icon">
+                  <i class="ri-cloudy-line"></i>
+                </div>
 
-                <span>
-                  Humidity
+                <h3>Weather</h3>
 
-                  <strong>72%</strong>
+                <span class="location">
+                  Bangalore
+                  <i class="ri-map-pin-line"></i>
                 </span>
               </div>
 
-              <div>
-                <i class="ri-windy-line"></i>
+              <div class="weather">
+                <div>
+                  <h2>23° <span>C</span></h2>
+                  <p>Partly Cloudy</p>
+                </div>
 
-                <span>
-                  Wind
-
-                  <strong>12 km/h</strong>
-                </span>
+                <div class="weather-image">☁️</div>
               </div>
 
-              <div>
-                <i class="ri-temp-cold-line"></i>
+              <div class="weather-footer">
+                <div>
+                  <i class="ri-drop-line"></i>
+                  <span>Humidity <strong>72%</strong></span>
+                </div>
 
-                <span>
-                  Feels Like
+                <div>
+                  <i class="ri-windy-line"></i>
+                  <span>Wind <strong>12 km/h</strong></span>
+                </div>
 
-                  <strong>24°</strong>
-                </span>
+                <div>
+                  <i class="ri-temp-cold-line"></i>
+                  <span>Feels Like <strong>24°</strong></span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!--================ QUOTE ================-->
+            <div class="glass-card">
+              <div class="card-title">
+                <div class="icon quote">
+                  <i class="ri-double-quotes-l"></i>
+                </div>
+
+                <h3>Motivation</h3>
+              </div>
+
+              <div class="quote-body">
+                <p id="quote">Believe you can and you're halfway there.</p>
+                <span id="author">— Theodore Roosevelt</span>
+              </div>
+
+              <button class="refresh">
+                <i class="ri-refresh-line"></i>
+              </button>
+            </div>
+          </section>
+
+          <!-- FEATURES -->
+          <section class="features">
+            <div class="feature-card pomodoro-card">
+              <i class="ri-timer-line"></i>
+              <h4>Pomodoro Timer</h4>
+
+              <h2 id="timer"></h2>
+
+              <div class="timer-buttons">
+                <button id="startTimer">Start</button>
+                <button id="pauseTimer">Pause</button>
+                <button id="resetTimer">Reset</button>
+              </div>
+            </div>
+
+            <div class="side-features">
+              <div class="nav-card" id="gotoTodo">
+                <div class="nav-left">
+                  <i class="ri-checkbox-line"></i>
+                  <span>Todo List</span>
+                </div>
+
+                <i class="ri-arrow-right-s-line nav-arrow"></i>
+              </div>
+
+              <div class="nav-card" id="gotoPlanner">
+                <div class="nav-left">
+                  <i class="ri-calendar-line"></i>
+                  <span>Planner</span>
+                </div>
+
+                <i class="ri-arrow-right-s-line nav-arrow"></i>
+              </div>
+
+              <div class="nav-card" id="gotoGoals">
+                <div class="nav-left">
+                  <i class="ri-focus-3-line"></i>
+                  <span>Goals</span>
+                </div>
+
+                <i class="ri-arrow-right-s-line nav-arrow"></i>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- //Todo -->
+
+        <section id="todoPage" class="page">
+          <header class="header">
+            <div>
+              <h1>Todo List 📝</h1>
+              <p>Manage your daily tasks.</p>
+            </div>
+          </header>
 
           <div class="glass-card">
-            <div class="card-title">
-              <div class="icon quote">
-                <i class="ri-double-quotes-l"></i>
-              </div>
+            <div class="inp" style="">
+              <input
+                type="text"
+                id="todoInput"
+                placeholder="Enter a task..."
+                class="inp-1"
+              />
+              <select name="Category" id="">
+                <option value="">Work</option>
+                <option value="">Study</option>
+                <option value="">Personal</option>
+                <option value="">Health</option>
+                <option value="">Shopping</option>
+              </select>
 
-              <h3>Motivation</h3>
+              <button
+                id="addTodo"
+                style="
+                  padding: 12px 20px;
+                  border: none;
+                  border-radius: 10px;
+                  cursor: pointer;
+                "
+              >
+                Add
+              </button>
             </div>
 
-            <div class="quote-body">
-              <p id="quote">Believe you can and you're halfway there.</p>
-
-              <span id="author"> — Theodore Roosevelt </span>
-            </div>
-
-            <button class="refresh">
-              <i class="ri-refresh-line"></i>
-            </button>
+            <ul id="todoList"></ul>
           </div>
         </section>
 
-        <!--====================================================-->
-        <!-- FEATURE GRID -->
-        <!--====================================================-->
+        <!--================ PLANNER PAGE ================-->
 
-        <section class="features">
-          <div class="feature-card">
-            <i class="ri-checkbox-line"></i>
+        <section id="plannerPage" class="page">
+          <header class="header">
+            <div>
+              <h1>Daily Planner 📅</h1>
+              <p>Plan your day effectively.</p>
+            </div>
+          </header>
 
-            <h4>Todo List</h4>
+          <div class="glass-card">
+            <div class="inp">
+              <input type="time" id="plannerTime" class="inp-1" />
 
-            <p>Add and manage your tasks</p>
+              <input
+                type="text"
+                id="plannerTask"
+                class="inp-1"
+                placeholder="Enter activity..."
+              />
+
+              <button id="addPlanner">Add</button>
+            </div>
+
+            <div id="plannerList"></div>
           </div>
+        </section>
 
-          <div class="feature-card">
-            <i class="ri-calendar-line"></i>
+        <!--================ POMODORO PAGE ================-->
 
-            <h4>Daily Planner</h4>
+        <!--================ GOALS PAGE ================-->
 
-            <p>Plan your day efficiently</p>
-          </div>
+        <section id="goalsPage" class="page">
+          <header class="header">
+            <div>
+              <h1>Goals 🎯</h1>
+              <p>Track your personal goals.</p>
+            </div>
+          </header>
 
-          <div class="feature-card">
-            <i class="ri-timer-line"></i>
+          <div class="glass-card">
+            <div class="inp">
+              <input
+                type="text"
+                id="goalInput"
+                class="inp-1"
+                placeholder="Enter your goal..."
+              />
 
-            <h4>Pomodoro Timer</h4>
+              <button id="addGoal">Add Goal</button>
+            </div>
 
-            <p>Stay focused while working</p>
-          </div>
-
-          <div class="feature-card">
-            <i class="ri-focus-3-line"></i>
-
-            <h4>Goals</h4>
-
-            <p>Track your progress</p>
-          </div>
-
-          <div class="feature-card">
-            <i class="ri-double-quotes-l"></i>
-
-            <h4>Motivation</h4>
-
-            <p>Get inspired every day</p>
-          </div>
-
-          <div class="feature-card">
-            <i class="ri-cloud-line"></i>
-
-            <h4>Weather</h4>
-
-            <p>Check current weather</p>
+            <div id="goalList"></div>
           </div>
         </section>
       </main>
