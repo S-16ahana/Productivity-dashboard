@@ -70,12 +70,320 @@ overflow:hidden;
 
 /* backdrop-filter:blur(10px); */
 }
+
+#addGoal{
+    border-radius: 10px;
+    border: none;
+    width: 10%;
+}
+
+.planner-form{
+
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr auto;
+    gap:12px;
+    margin-bottom:25px;
+
+}
+
+#plannerList{
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+
+}
+
+.planner-card{
+
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:18px;
+    padding:20px;
+    transition:.3s;
+
+}
+
+.planner-card:hover{
+
+    background:rgba(255,255,255,.12);
+
+}
+
+.planner-top{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+}
+
+.planner-top h3{
+
+    font-size:22px;
+    margin-bottom:10px;
+    color:#fff;
+
+}
+
+.planner-top p{
+
+    color:rgba(255,255,255,.7);
+    margin:6px 0;
+
+}
+
+.priority{
+
+    padding:8px 16px;
+    border-radius:30px;
+    font-weight:600;
+
+}
+
+.high{
+
+    background:#ff5252;
+    color:#fff;
+
+}
+
+.medium{
+
+    background:#ffc107;
+    color:#222;
+
+}
+
+.low{
+
+    background:#66e39b;
+    color:#081321;
+
+}
+
+.planner-actions{
+
+    display:flex;
+    gap:10px;
+    margin-top:18px;
+
+}
+#addPlanner{
+    border: none;
+    border-radius: 10px;
+}
+#plannerPriority{
+     border: none;
+    border-radius: 10px;
+}
+.planner-actions button{
+
+    padding:10px 16px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+
+}
+
+.done-btn{
+
+    background:#66e39b;
+
+}
+
+.edit-btn{
+
+    background:#3498db;
+    color:#fff;
+
+}
+
+.delete-btn{
+
+    background:#ff4d4d;
+    color:#fff;
+
+}
+
+.planner-completed{
+
+    border:1px solid #66e39b;
+
+}
+
+.planner-completed h3{
+
+    text-decoration:line-through;
+    opacity:.6;
+
+}
+
+@media(max-width:900px){
+
+.planner-form{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+}
 .dashboard{
     background:rgba(255,255,255,.15);
     border:1px solid rgba(255,255,255,.25);
 
 }
+#todoList{
+    list-style:none;
+    padding:0;
+    margin-top:25px;
 
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.todo-card{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:16px;
+
+    padding:18px 22px;
+
+    transition:.3s;
+
+}
+
+.todo-card:hover{
+
+    background:rgba(255,255,255,.12);
+
+}
+#todoCategory{
+    border-radius: 10px;
+    outline: none;
+}
+.todo-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+}
+
+.todo-top h3{
+
+    color:white;
+
+    font-size:20px;
+
+    margin-bottom:10px;
+
+}
+
+.category{
+
+    background:#66e39b;
+
+    color:#081321;
+
+    padding:4px 12px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+.status{
+
+    color:white;
+
+    font-size:14px;
+
+}
+
+.todo-buttons{
+
+    margin-top:18px;
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.todo-buttons button{
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:10px 16px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.complete-btn{
+
+    background:#66e39b;
+
+    color:#081321;
+
+}
+
+.edit-btn{
+
+    background:#3498db;
+
+    color:white;
+
+}
+
+.delete-btn{
+
+    background:#e74c3c;
+
+    color:white;
+
+}
+
+.todo-buttons button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.completed{
+
+    border:1px solid #66e39b;
+
+}
+
+.completed h3{
+
+    text-decoration:line-through;
+
+    opacity:.65;
+
+}
 .sidebar{
 width:220px;
 flex-shrink:0;
@@ -93,7 +401,8 @@ transition:.35s ease;
 .logo-collapse{
     display: flex;
     justify-content: space-between;
-    gap: 50px;
+    align-items: center;
+    gap: 10px;
 }
 
 .sidebar.collapsed{
@@ -242,7 +551,119 @@ height:60px;
 .sidebar.collapsed .logo i{
 font-size:34px;
 }
+#goalList{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    margin-top:25px;
+}
 
+.goal-card{
+
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:16px;
+    padding:18px 22px;
+    transition:.3s;
+
+}
+
+.goal-card:hover{
+    background:rgba(255,255,255,.12);
+}
+
+.goal-top{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+
+}
+
+.goal-top h3{
+
+    color:white;
+    font-size:20px;
+
+}
+
+.goal-buttons{
+
+    display:flex;
+    gap:10px;
+
+}
+
+.goal-buttons button{
+
+    border:none;
+    border-radius:10px;
+    padding:10px 16px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+.goal-complete{
+
+    background:#66e39b;
+    color:#081321;
+
+}
+
+.goal-edit{
+
+    background:#3498db;
+    color:white;
+
+}
+
+.goal-delete{
+
+    background:#e74c3c;
+    color:white;
+
+}
+
+.goal-buttons button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.goal-status{
+
+    display:inline-block;
+    margin-top:14px;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+
+}
+
+.progress-status{
+
+    background:#f39c12;
+    color:white;
+
+}
+
+.achieved-status{
+
+    background:#2ecc71;
+    color:white;
+
+}
+
+.goal-achieved h3{
+
+    text-decoration:line-through;
+    opacity:.7;
+
+}
 .header{
 display:flex;
 align-items:center;
@@ -740,8 +1161,12 @@ background:rgba(255,255,255,.3);
 transition:.2s;
 }
 
-.sidebar.collapsed .collapse-btn{
-transform:rotate(180deg);
+.collapse-btn i{
+    transition:0.3s;
+}
+
+.sidebar.collapsed .collapse-btn i{
+    transform:rotate(180deg);
 }
 
 .sidebar.collapsed nav a i,

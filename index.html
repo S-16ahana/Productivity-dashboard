@@ -67,7 +67,7 @@
 
         <div class="bottom-menu">
           <a href="#" id="themeBtn">
-            <i class="ri-moon-line"></i>
+            <i id="themeIcon" class="ri-moon-line"></i>
             <span>Theme</span>
           </a>
         </div>
@@ -225,7 +225,7 @@
         <section id="todoPage" class="page">
           <header class="header">
             <div>
-              <h1>Todo List 📝</h1>
+              <h1>Todo List</h1>
               <p>Manage your daily tasks.</p>
             </div>
           </header>
@@ -238,7 +238,7 @@
                 placeholder="Enter a task..."
                 class="inp-1"
               />
-              <select name="Category" id="">
+              <select name="Category" id="todoCategory">
                 <option value="">Work</option>
                 <option value="">Study</option>
                 <option value="">Personal</option>
@@ -268,37 +268,41 @@
         <section id="plannerPage" class="page">
           <header class="header">
             <div>
-              <h1>Daily Planner 📅</h1>
-              <p>Plan your day effectively.</p>
+              <h1>Daily Planner</h1>
+              <p>Organize your schedule for the day.</p>
             </div>
           </header>
 
           <div class="glass-card">
-            <div class="inp">
-              <input type="time" id="plannerTime" class="inp-1" />
-
+            <div class="planner-form">
               <input
                 type="text"
                 id="plannerTask"
+                placeholder="Activity..."
                 class="inp-1"
-                placeholder="Enter activity..."
               />
 
-              <button id="addPlanner">Add</button>
+              <input type="date" id="plannerDate" class="inp-1" />
+
+              <input type="time" id="plannerTime" class="inp-1" />
+
+              <!-- <select id="plannerPriority">
+    <option>High</option>
+    <option>Medium</option>
+    <option>Low</option>
+</select> -->
+
+              <button id="addPlanner">Schedule</button>
             </div>
 
             <div id="plannerList"></div>
           </div>
         </section>
 
-        <!--================ POMODORO PAGE ================-->
-
-        <!--================ GOALS PAGE ================-->
-
         <section id="goalsPage" class="page">
           <header class="header">
             <div>
-              <h1>Goals 🎯</h1>
+              <h1>Goals</h1>
               <p>Track your personal goals.</p>
             </div>
           </header>
@@ -320,8 +324,6 @@
         </section>
       </main>
     </div>
-
-    <!-- JS -->
 
     <script src="script.js"></script>
   </body>
