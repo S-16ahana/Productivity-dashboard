@@ -207,14 +207,14 @@ themeBtn.addEventListener("click", function (e) {
     document.body.classList.toggle("dark", darkMode);
 
     if (darkMode) {
-        bgVideo.src = "assets/dark.mp4";
+        bgVideo.src = "./Assets/dark.mp4";
 
         // Change icon to Sun
         themeIcon.classList.remove("ri-moon-line");
         themeIcon.classList.add("ri-sun-line");
 
     } else {
-        bgVideo.src = "assets/morning.mp4";
+        bgVideo.src = "./Assets/morning.mp4";
 
         // Change icon to Moon
         themeIcon.classList.remove("ri-sun-line");
